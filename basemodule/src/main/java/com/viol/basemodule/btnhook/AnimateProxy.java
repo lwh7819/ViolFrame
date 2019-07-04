@@ -12,14 +12,14 @@ import java.lang.reflect.Method;
  * Describe:
  */
 public abstract class AnimateProxy {
-    abstract void doAnimate(View view);
+    protected void doAnimate(View view) {}
 
     abstract void doCustomEvent(Method method, Object... args);
 
     static class ScaleXAnimate extends AnimateProxy{
 
         @Override
-        void doAnimate(View view) {
+        protected void doAnimate(View view) {
             ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1f, 1.5f, 1f);
             objectAnimator.setDuration(500);
             objectAnimator.start();
@@ -34,7 +34,7 @@ public abstract class AnimateProxy {
     final static class RotationAnimate extends AnimateProxy{
 
         @Override
-        void doAnimate(View view) {
+        protected void doAnimate(View view) {
             ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "rotation", 0f, 360f);
             objectAnimator.setDuration(500);
             objectAnimator.start();

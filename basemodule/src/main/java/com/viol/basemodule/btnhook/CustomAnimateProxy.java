@@ -11,10 +11,6 @@ import java.lang.reflect.Method;
  * Describe:
  */
 public class CustomAnimateProxy extends AnimateProxy {
-    @Override
-    public void doAnimate(View view) {
-
-    }
 
     @Override
     void doCustomEvent(Method method, Object... args) {
