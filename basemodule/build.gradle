@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.VersionCode
+        versionName rootProject.VersionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation rootProject.lib_appcompat_v7
+    implementation rootProject.lib_support_recyclerview_v7
+    implementation rootProject.lib_support_cardview_v7
+    implementation rootProject.lib_support_annotations
+
+    implementation rootProject.butterknife.butterknife
+    annotationProcessor rootProject.butterknife.butterknife_compiler
+    implementation rootProject.glide.glide
+    annotationProcessor rootProject.glide.glide_compiler
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
