@@ -16,7 +16,7 @@ public abstract class AnimateProxy {
 
     abstract void doCustomEvent(Method method, Object... args);
 
-    static class ScaleXAnimate extends AnimateProxy{
+    final static class ScaleXAnimate extends AnimateProxy{
 
         @Override
         protected void doAnimate(View view) {
@@ -26,9 +26,7 @@ public abstract class AnimateProxy {
         }
 
         @Override
-        void doCustomEvent(Method method, Object... args) {
-
-        }
+        void doCustomEvent(Method method, Object... args) {}
     }
 
     final static class RotationAnimate extends AnimateProxy{
@@ -41,8 +39,6 @@ public abstract class AnimateProxy {
         }
 
         @Override
-        void doCustomEvent(Method method, Object... args) {
-
-        }
+        void doCustomEvent(Method method, Object... args) {}
     }
 }

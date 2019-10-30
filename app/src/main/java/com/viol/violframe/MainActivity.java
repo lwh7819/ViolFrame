@@ -24,12 +24,12 @@ public class MainActivity extends BaseActivity {
 
     @BindView(R.id.iv_head)
     ImageView ivHead;
-    @HookClick(value = R.id.tv_hello_world, clazz = RealClick2.class)
+    @HookClick(value = R.id.tv_hello_world, clazz = RealClick.class)
     @BindView(R.id.tv_hello_world)
     TextView tvHelloWorld;
     @BindView(R.id.m_view)
     View mView;
-    @HookClick(value = R.id.m_view_red, clazz = RealClick.class)
+    @HookClick(value = R.id.m_view_red, clazz = RealClick2.class)
     @BindView(R.id.m_view_red)
     TextView mViewRed;
     @BindView(R.id.recycler_veiw)
