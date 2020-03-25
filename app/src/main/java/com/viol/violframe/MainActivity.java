@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void doClick(View v) {
         switch (v.getId()) {
-
+            // master test
         }
     }
 }
