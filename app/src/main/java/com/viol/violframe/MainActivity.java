@@ -111,6 +111,7 @@ public class MainActivity extends BaseActivity {
     protected void doClick(View v) {
         switch (v.getId()) {
             // master test
+            // master test2
         }
     }
 }
